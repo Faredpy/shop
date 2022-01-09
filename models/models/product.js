@@ -17,6 +17,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'brandId'
       })
       this.hasMany(models.Attribute, {
+        as: 'info',
         foreignKey: 'productId'
       })
       this.belongsToMany(models.Basket, {
