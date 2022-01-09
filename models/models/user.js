@@ -30,7 +30,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    role: DataTypes.STRING
+    role: {
+      type: DataTypes.STRING,
+      defaultValue: "USER"
+    }
   }, {
     sequelize,
     modelName: 'User',
